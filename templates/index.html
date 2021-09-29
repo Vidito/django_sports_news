@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .card {
+        border: 2px solid purple;
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>UK Sports News</h1>
+    {% for author,title, description,date,url,source in news %}
+    <div class="card">
+      <p>Source: {{source}}</p>
+      <p>Title: <a href="{{url}}"> {{title}}</a></p>
+      <p>Summary: {{description}}</p>
+      <p>Date: {{date}}</p>
+      <p>Author: {{author}}</p>
+    </div>
+    {%endfor%}
+  </body>
+</html>
